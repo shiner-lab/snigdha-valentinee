@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Snigdha ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffd1dc, #ffe6f0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: "Segoe UI", sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      text-align: center;
+      width: 340px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    }
+
+    h2 {
+      color: #ff4d6d;
+      margin-bottom: 25px;
+    }
+
+    button {
+      padding: 12px 26px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background: #ddd;
+      position: absolute;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Snigdha Rose 🌹<br>will you be my Valentine?</h2>
+  <button id="yes">Yes 💖</button>
+  <button id="no">No 🙈</button>
+  <div class="hint">“No” seems a little shy 😈</div>
+</div>
+
+<script>
+  const noBtn = document.getElementById("no");
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 80);
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+
+  document.getElementById("yes").onclick = () => {
+    document.body.innerHTML = `
+      <div style="
+        text-align:center;
+        color:#ff4d6d;
+        font-family:'Segoe UI', sans-serif;
+      ">
+        <h1>Snigdha Rose 🌹</h1>
+        <h2>I love you ❤️</h2>
+        <p style="font-size:18px;">
+          Today, tomorrow, and always.<br>
+          Thank you for being mine 💕
+        </p>
+      </div>`;
+  };
+</script>
+
+</body>
+</html>
