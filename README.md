@@ -1,2 +1,2 @@
 # snigdha-valentinee
-A vslentinte page for snigdha
+A valentinte page for snigdha
