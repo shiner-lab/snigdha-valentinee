@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Father's Day Nanna ❤️</title>
+
+<title>Happy Father's Day ❤️</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -14,64 +16,83 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family: 'Segoe UI', sans-serif;
-background:#081224;
+font-family:Arial,sans-serif;
+background:#07122a;
 color:white;
 overflow-x:hidden;
 scroll-snap-type:y mandatory;
 }
 
-.slide{
+section{
 height:100vh;
 scroll-snap-align:start;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:30px;
+padding:25px;
 text-align:center;
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .hero{
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
-url('cover.jpg');
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("coverjpg.jpeg");
+
 background-size:cover;
 background-position:center;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:42px;
 color:#FFD700;
 margin-bottom:10px;
 }
 
-.hero h2{
-font-size:1.4rem;
+.hero p{
+font-size:20px;
 }
 
-.btn{
-margin-top:25px;
-padding:15px 30px;
-background:#FFD700;
-color:#111;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
+.scroll{
+position:absolute;
+bottom:25px;
+font-size:18px;
+animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(10px);
+}
 }
 
 .card{
 background:white;
 color:#222;
-max-width:800px;
 padding:30px;
 border-radius:25px;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
+max-width:800px;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
 .card h2{
-color:#123c8d;
 margin-bottom:15px;
+color:#123c8d;
 }
 
 .card p{
@@ -79,54 +100,34 @@ line-height:1.8;
 }
 
 .memory{
-background:linear-gradient(135deg,#123c8d,#0b1f47);
-}
-
-.reason-box{
-background:white;
-color:black;
-padding:18px;
-margin:10px;
-border-radius:15px;
-width:320px;
-font-weight:bold;
+background:linear-gradient(135deg,#0f1f4d,#1e3c72);
 }
 
 .gallery{
-background:#0b1328;
+background:#081224;
 }
 
-.gallery-grid{
+.gallery h1{
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.photos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:1fr;
 gap:15px;
 width:100%;
-max-width:1000px;
+max-width:400px;
 }
 
-.gallery-grid img{
+.photos img{
 width:100%;
-height:280px;
-object-fit:cover;
 border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,.4);
-}
-
-.music{
-background:linear-gradient(135deg,#1a237e,#3949ab);
-}
-
-.music a{
-background:#FFD700;
-padding:15px 30px;
-border-radius:50px;
-text-decoration:none;
-color:black;
-font-weight:bold;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 
 .final{
-background:linear-gradient(135deg,#06111f,#102a43);
+background:linear-gradient(135deg,#091a3a,#102c57);
 }
 
 .final h1{
@@ -134,165 +135,166 @@ color:#FFD700;
 margin-bottom:20px;
 }
 
-.arrow{
-position:absolute;
-bottom:20px;
-font-size:2rem;
-animation:bounce 1.5s infinite;
+.heart{
+font-size:40px;
+animation:pulse 1.2s infinite;
 }
 
-@keyframes bounce{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(10px);}
+@keyframes pulse{
+50%{
+transform:scale(1.15);
 }
+}
+
 </style>
 </head>
 
 <body>
 
-<section class="slide hero">
+<section class="hero">
+
 <h1>❤️ FOR MY FIRST HERO ❤️</h1>
-<h2>Happy Father's Day Nanna 🌟</h2>
-<p style="margin-top:15px;">From Your Ammu ❤️</p>
 
-<a href="#letter" class="btn">Open Letter 💌</a>
+<p>Happy Father's Day Nanna 🌟</p>
 
-<div class="arrow">⬇️</div>
+<p style="margin-top:10px;">
+From Ammu ❤️
+</p>
+
+<div class="scroll">
+⬇️ Scroll Down ⬇️
+</div>
+
 </section>
 
-<section class="slide" id="letter">
+<section class="memory">
+
 <div class="card">
+
 <h2>Dear Nanna,</h2>
 
 <p>
-Thank you for always being there for us, for working so hard,
+Thank you for always being there for us,
+for working so hard,
 and for loving us more than words can describe.
 </p>
 
 <br>
 
 <p>
-You've always pushed me to do better, even when you were strict,
+You've always pushed me to do better,
+even when you were strict,
 and I know it comes from wanting the best for me.
 </p>
 
 <br>
 
 <p>
-You'll always be the only person I'll always look up to.
-Thank you for every sacrifice I never saw,
-for your support, patience and endless love.
+You'll always be the person I look up to.
+Thank you for every sacrifice,
+every bit of support,
+and every act of love.
 </p>
 
 <br>
 
 <p>
-I may not say it often, but I am grateful for everything you do.
-I am lucky to have you as my dad.
+I may not say it often,
+but I am lucky to have you as my dad.
 </p>
 
 <br>
 
-<b>With Love,<br>Ammu ❤️</b>
+<b>
+With Love ❤️<br>
+Ammu
+</b>
+
 </div>
+
 </section>
 
-<section class="slide memory">
-<div class="card">
-<h2>🎂 My Birthday With You</h2>
-
-<p>
-Every birthday became more special because you were there beside me.
-Your smile and presence made every celebration unforgettable.
-</p>
-</div>
-</section>
-
-<section class="slide memory">
-<div class="card">
-<h2>🍰 Feeding Me Cake With Love</h2>
-
-<p>
-One of my favourite memories is you feeding me cake.
-Simple moments like these stay in my heart forever.
-</p>
-</div>
-</section>
-
-<section class="slide">
-<h1 style="color:#FFD700;margin-bottom:20px;">
-🏆 Why You're The Best Dad
-</h1>
-
-<div class="reason-box">💪 Your Strength</div>
-<div class="reason-box">❤️ Your Love</div>
-<div class="reason-box">🌟 Your Sacrifices</div>
-<div class="reason-box">🤝 Your Support</div>
-<div class="reason-box">👑 My Role Model</div>
-</section>
-
-<section class="slide gallery">
-<h1 style="color:#FFD700;margin-bottom:30px;">
-📸 Our Beautiful Memories
-</h1>
-
-<div class="gallery-grid">
-<img src="cover.jpg">
-<img src="selfie.jpg">
-<img src="cake.jpg">
-<img src="birthday.jpg">
-<img src="hero.jpg">
-</div>
-</section>
-
-<section class="slide music">
-<h1>🎵 Nannaku Prematho</h1>
-
-<p style="margin:20px 0;">
-A song dedicated to the best dad ❤️
-</p>
-
-<a target="_blank"
-href="https://www.youtube.com/results?search_query=Nannaku+Prematho+song">
-Listen Now 🎶
-</a>
-</section>
-
-<section class="slide final">
-<h1>❤️ Final Message ❤️</h1>
+<section>
 
 <div class="card">
 
-<p>
-No matter what Dadda,
-I will always love you.
-</p>
+<h2>🏆 Why You're My Hero</h2>
 
+<p>💪 Your Strength</p>
 <br>
+<p>❤️ Your Love</p>
+<br>
+<p>🤝 Your Support</p>
+<br>
+<p>🌟 Your Sacrifices</p>
+<br>
+<p>👑 My Inspiration</p>
+
+</div>
+
+</section>
+
+<section class="gallery">
+
+<h1>📸 Our Memories</h1>
+
+<div class="photos">
+
+<img src="coverjpg.jpeg">
+
+<img src="dad.jpeg">
+
+<img src="cakejpg.jpeg">
+
+<img src="birthdayjpg.jpeg">
+
+<img src="herojpg.jpeg">
+
+</div>
+
+</section>
+
+<section class="final">
+
+<div class="heart">❤️</div>
+
+<h1>Thank You Nanna</h1>
+
+<div class="card">
 
 <p>
-I promise to work hard,
-make you proud,
-and stand by our family,
-just like you always have.
+No matter where life takes me,
+I will always be grateful for everything you've done.
 </p>
 
 <br>
 
 <p>
 Thank you for being my first hero,
-my inspiration,
-and my greatest blessing.
+my guide,
+and my biggest support.
+</p>
+
+<br>
+
+<p>
+I hope I make you proud one day.
 </p>
 
 <br>
 
 <h3>
-Love,<br>
-Ammu ❤️
+Love You Always ❤️
 </h3>
 
+<br>
+
+<b>
+Your Ammu
+</b>
+
 </div>
+
 </section>
 
 </body>
