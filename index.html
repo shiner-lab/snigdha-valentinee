@@ -1,41 +1,339 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Father's Day</title>
+
+<title>Happy Father's Day ❤️</title>
 
 <style>
-body{
-background:#081224;
-color:white;
-font-family:Arial;
-text-align:center;
-padding:20px;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-img{
-width:300px;
-max-width:90%;
-border-radius:20px;
-margin:20px 0;
+body{
+font-family:'Segoe UI',sans-serif;
+background:#081224;
+color:white;
+overflow-x:hidden;
+scroll-snap-type:y mandatory;
 }
+
+/* Floating stars */
+body::before{
+content:"✨ ⭐ ✨ ⭐ ✨ ⭐ ✨";
+position:fixed;
+top:10px;
+left:0;
+width:100%;
+text-align:center;
+font-size:22px;
+opacity:.4;
+pointer-events:none;
+animation:floatStars 5s infinite alternate;
+z-index:999;
+}
+
+@keyframes floatStars{
+from{transform:translateY(0);}
+to{transform:translateY(15px);}
+}
+
+.slide{
+height:100vh;
+scroll-snap-align:start;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:25px;
+text-align:center;
+animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+url("cover.jpeg");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:40px;
+color:#FFD700;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.scroll{
+position:fixed;
+bottom:25px;
+left:50%;
+transform:translateX(-50%);
+font-size:18px;
+font-weight:bold;
+color:#FFD700;
+animation:bounce 1.5s infinite;
+z-index:9999;
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateX(-50%) translateY(0);
+}
+50%{
+transform:translateX(-50%) translateY(10px);
+}
+}
+
+.card{
+background:white;
+color:#222;
+padding:30px;
+border-radius:25px;
+max-width:800px;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.card h2{
+color:#123c8d;
+margin-bottom:15px;
+}
+
+.card p{
+line-height:1.8;
+}
+
+.photo-slide{
+background:#091a3a;
+}
+
+.photo-slide img{
+width:90%;
+max-width:420px;
+height:70vh;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+}
+
+.photo-slide h2{
+margin-top:20px;
+color:#FFD700;
+}
+
+.music{
+background:linear-gradient(135deg,#1a237e,#3949ab);
+}
+
+.music-btn{
+margin-top:20px;
+display:inline-block;
+padding:15px 30px;
+background:#FFD700;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:50px;
+}
+
+.final{
+background:linear-gradient(135deg,#06111f,#102a43);
+}
+
+.final h1{
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.heart{
+font-size:50px;
+animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.15);
+}
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>Happy Father's Day Nanna ❤️</h1>
+<!-- HERO -->
 
+<section class="slide hero">
+
+<h1>❤️ FOR MY FIRST HERO ❤️</h1>
+
+<p>Happy Father's Day Nanna 🌟</p>
+
+<p style="margin-top:10px;">
+From Your Ammu ❤️
+</p>
+
+<div class="scroll">
+⬇️ Scroll Down ⬇️
+</div>
+
+</section>
+
+<!-- LETTER -->
+
+<section class="slide">
+
+<div class="card">
+
+<h2>💌 Dear Nanna</h2>
+
+<p>
+Thank you for always being there for us,
+for working so hard,
+and for loving us more than words can describe.
+</p>
+
+<br>
+
+<p>
+You've always pushed me to do better,
+even when you were strict,
+and I know it comes from wanting the best for me.
+</p>
+
+<br>
+
+<p>
+You'll always be the person I look up to.
+Thank you for every sacrifice,
+every bit of support,
+and every act of love.
+</p>
+
+<br>
+
+<p>
+I may not say it often,
+but I am lucky to have you as my dad.
+</p>
+
+<br>
+
+<b>
+With Love ❤️<br>
+Ammu
+</b>
+
+</div>
+
+</section>
+
+<!-- PHOTOS -->
+
+<section class="slide photo-slide">
 <img src="cover.jpeg">
+<h2>❤️ Family Forever ❤️</h2>
+</section>
 
+<section class="slide photo-slide">
 <img src="dad.jpeg">
+<h2>🌟 My First Hero 🌟</h2>
+</section>
 
+<section class="slide photo-slide">
 <img src="cake.jpeg">
+<h2>🎂 Sweet Memories 🎂</h2>
+</section>
 
+<section class="slide photo-slide">
 <img src="birthday.jpeg">
+<h2>🎉 Special Moments 🎉</h2>
+</section>
 
+<section class="slide photo-slide">
 <img src="hero.jpeg">
+<h2>👑 My Inspiration 👑</h2>
+</section>
+
+<!-- MUSIC -->
+
+<section class="slide music">
+
+<div class="card">
+
+<h2>🎵 A Song For You</h2>
+
+<p>
+Nannaku Prematho ❤️
+</p>
+
+<br>
+
+<a
+class="music-btn"
+href="https://www.youtube.com/results?search_query=Nannaku+Prematho+song"
+target="_blank">
+
+▶ Play Song
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FINAL -->
+
+<section class="slide final">
+
+<div class="heart">❤️</div>
+
+<h1>Thank You Nanna</h1>
+
+<div class="card">
+
+<p>
+For every sacrifice I never noticed,
+every worry you never showed,
+and every dream you carried for me.
+</p>
+
+<br>
+
+<p>
+No matter how old I become,
+I will always be your Ammu.
+</p>
+
+<br>
+
+<h2>
+I Love You ❤️
+</h2>
+
+</div>
+
+</section>
 
 </body>
 </html>
